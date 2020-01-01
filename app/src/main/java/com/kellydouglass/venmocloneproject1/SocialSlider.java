@@ -28,11 +28,13 @@ public class SocialSlider extends Fragment  {
 
 
     ViewPager viewPager;
-    TabLayout tabLayout;
+     TabLayout tabLayout;
 
-    FriendsFragment friendsFragment;
-    MeFragment meFragment;
-    PublicFragment publicFragment;
+     FriendsFragment friendsFragment;
+     MeFragment meFragment;
+     PublicFragment publicFragment;
+
+
 
     public SocialSlider() {
         // Required empty public constructor
@@ -58,6 +60,7 @@ public class SocialSlider extends Fragment  {
         meFragment = new MeFragment();
         publicFragment = new PublicFragment();
 
+
         MyPageAdapter myPageAdapter = new MyPageAdapter(getActivity(), getChildFragmentManager());
 
         tabLayout.setupWithViewPager(viewPager);
@@ -69,7 +72,7 @@ public class SocialSlider extends Fragment  {
 
         Context ctxt=null;
 
-        String[] fragmentNames = {"first", "second", "third"};
+        String[] fragmentNames = {"ME", "FRIENDS", "PUBLIC"};
 
         public MyPageAdapter(Context ctxt, FragmentManager fm) {
             super(fm);
@@ -81,9 +84,9 @@ public class SocialSlider extends Fragment  {
 
             switch (position) {
                 case 0:
-                    return friendsFragment;
-                case 1:
                     return meFragment;
+                case 1:
+                    return friendsFragment;
                 case 2:
                     return publicFragment;
             }

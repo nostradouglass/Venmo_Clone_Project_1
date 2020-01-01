@@ -10,4 +10,51 @@
         android:name="com.kellydouglass.venmocloneproject1.SocialSlider"
         android:label="fragment_social_slider"
         tools:layout="@layout/fragment_social_slider" />
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.kellydouglass.venmocloneproject1.Settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/searchPeople"
+        android:name="com.kellydouglass.venmocloneproject1.SearchPeople"
+        android:label="fragment_search_people"
+        tools:layout="@layout/fragment_search_people" >
+        <action
+            android:id="@+id/action_searchPeople_to_venmoCard"
+            app:destination="@id/venmoCard" />
+    </fragment>
+    <fragment
+        android:id="@+id/venmoCard"
+        android:name="com.kellydouglass.venmocloneproject1.VenmoCard"
+        android:label="fragment_venmo_card"
+        tools:layout="@layout/fragment_venmo_card" />
+    <fragment
+        android:id="@+id/scanCode"
+        android:name="com.kellydouglass.venmocloneproject1.scanCode"
+        android:label="fragment_scan_code"
+        tools:layout="@layout/fragment_scan_code" />
+    <fragment
+        android:id="@+id/paymentMethods"
+        android:name="com.kellydouglass.venmocloneproject1.PaymentMethods"
+        android:label="fragment_payment_methods"
+        tools:layout="@layout/fragment_payment_methods" />
+    <fragment
+        android:id="@+id/incomplete"
+        android:name="com.kellydouglass.venmocloneproject1.Incomplete"
+        android:label="fragment_incomplete"
+        tools:layout="@layout/fragment_incomplete" />
+    <fragment
+        android:id="@+id/purchases"
+        android:name="com.kellydouglass.venmocloneproject1.Purchases"
+        android:label="fragment_purchases"
+        tools:layout="@layout/fragment_purchases" />
+    <fragment
+        android:id="@+id/getHelp"
+        android:name="com.kellydouglass.venmocloneproject1.GetHelp"
+        android:label="fragment_get_help"
+        tools:layout="@layout/fragment_get_help" />
+    <action
+        android:id="@+id/action_global_settings"
+        app:destination="@id/settings" />
 </navigation>
